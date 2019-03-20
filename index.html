@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Daniel Ciobanu</title>
+
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Fichiers CSS -->
+<link rel="stylesheet" href="files/reset.css">
+<!--[if lt IE 9]> 
+	<link rel="stylesheet" href="css/cv.css" media="screen">
+<![endif]-->
+<link rel="stylesheet" media="screen and (max-width:480px)" href="files/mobile.css">
+<link rel="stylesheet" media="screen and (min-width:481px)" href="files/cv.css">
+<link rel="stylesheet" media="print" href="files/print.css">
+<script src="files/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="files/jasc.js"></script>
+<link rel="stylesheet" href="files/style.css">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header role="banner">
+		<div class="container_16">
+				<hgroup>
+					<h1>Ciobanu Ionut-Daniel</h1>
+					<h3 class="ml11">
+							<span class="text-wrapper">
+							  <span class="line line1"></span>
+							  <span class="letters">Everything you can imagine is real</span>
+							</span>
+						  </h3>
+				</hgroup>
+	<script>
+		$('.ml11 .letters').each(function(){
+		$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+		});
+
+		anime.timeline({loop: true})
+		.add({
+		targets: '.ml11 .line',
+		scaleY: [0,1],
+		opacity: [0.5,1],
+		easing: "easeOutExpo",
+		duration: 700
+		})
+		.add({
+		targets: '.ml11 .line',
+		translateX: [0,$(".ml11 .letters").width()],
+		easing: "easeOutExpo",
+		duration: 700,
+		delay: 100
+		}).add({
+		targets: '.ml11 .letter',
+		opacity: [0,1],
+		easing: "easeOutExpo",
+		duration: 600,
+		offset: '-=775',
+		delay: function(el, i) {
+		return 34 * (i+1)
+		}
+		}).add({
+		targets: '.ml11',
+		opacity: 0,
+		duration: 1000,
+		easing: "easeOutExpo",
+		delay: 1000
+		});
+	</script>
+				<figure>
+					<img src="files/avatar.jpg" alt="Ciobanu Ionut-Daniel">
+				</figure>
+		</div>
+	</header>
+	
+	<!-- Contact -->
+	<section class="contactform clearfix">
+		<div class="container_16">
+			<h3>Contact</h3>
+			<p>Remplissez le formulaire ci-dessous afin de m'envoyer un message. Je vous répondrais dans les plus bref délai. 
+			<br><em>Tous les champs sont requis.</em></p>
+			<form novalidate="novalidate" method="post" action="#" name="contact" class="grid_16">
+				<p class="grid_10"><textarea name="message" placeholder="Votre message" class="required"></textarea></p>
+				<p class="grid_6">
+					<input name="nom" placeholder="Nom - Prénom" class="required" type="text">
+					<input name="email" placeholder="Adresse email" class="required" type="email">	
+					<input name="envoi" value="Envoyer le message" class="required" type="submit">
+					<span class="messageform"></span>
+				</p>
+			</form>
+		</div>
+	</section>
+	
+	<!-- Corps -->
+	<section role="main" class="container_16 clearfix">
+		<div class="grid_16">
+			<!-- A propos -->
+			<div class="grid_8 apropos">
+				<h3>About me:</h3>
+				<p><strong> Hello, my name is Ciobanu Ionuț-Daniel, I'm an energetic and enthusiastic young IT student, currently studying at Romanian–American University,
+						this being my first year of study for a master degree in Computer Science for Business Management.
+					   I am seeking to work in an environment that will challenge me further.</strong></p>
+				<p><i>Daniel is a masculine given name and a surname of Hebrew origin. It means, "God is my judge", and derives from two early biblical figures.</i></p>
+				
+			</div>
+			
+			<!-- Compétences -->
+			<div class="grid_8 competences">
+				<h3>Skills</h3>
+				<ul class="barres">
+					<li data-skills="80">PHP<span style="width: 80%;"></span></li>
+					<li data-skills="65">JavaScript<span style="width: 65%;"></span></li>
+					<li data-skills="60">C#<span style="width: 60%;"></span></li>
+					<li data-skills="40">Python<span style="width: 40%;"></span></li>
+					<li data-skills="95">SQL<span style="width: 95%;"></span></li>
+				</ul>
+			</div>
+		</div>
+		
+			<!-- Expériences -->
+			<div class="grid_16 experiences">
+				<h3>Professional experience:</h3>
+				<ul>
+					<li>
+						<h4><strong>Vodafone Romania Technologies</strong></h4>
+						<span class="lieu"><strong>2nd Line Roaming Operations</strong></span>
+						<p>• Automation and operational enablers rollout</p>
+						<p>• Acquired Linux Knowledge</p>
+						<p>• Linux Scripting</p>
+						<p>• Security Patches Upgrades On Servers</p>
+						<p>• Linux Version Upgrades</p>
+						<p>• Team collaboration and communication</p>
+					</li>
+					<li>
+						<h4><strong>Microsoft</strong></h4>
+						<span class="lieu"><strong>Internship</strong></span>
+						<span class="dates">(3 Months)</span>
+						<p>Together with my team we created a project about Azure virtual Machines
+								and Availability called Exchange Cluster. We got the chance to practice C#
+								and .NET Framework, deploying and managing cloud apps on Windows
+								Azure, using SQL Azure, native Azure Storage REST API clients, cloud app
+								patterns and ideas on designing a cloud infrastructure. We also developed a
+								mobile app and a Website which I created using HTML, PHP and CSS and
+								integrated everything in Azure. 
+								</p>
+					</li>
+					<li>
+							<h4><strong>Work&Travel (Students Experience)</strong></h4>
+							<span class="lieu"><strong>LOS TIOS</strong></span>
+							<span class="dates">(United States 4 Months)</span>
+							<p>I enrolled in the Work and Travel program, where I choose my job as a waiter
+									in the US. This gave me the opportunity to work in Washington DC for 4
+									months, where I acquire better verbal skills as well as management knowledge
+									as I worked for 12 hours a day with the managers of the restaurant. </p>
+						</li>
+				</ul>
+			</div>
+		
+			<!-- Formations -->
+			<div class="grid_16 formations">
+				<h3>Education</h3>
+				<ul>
+					<li>
+						<h4><strong>Master's degree: Computer Science for Business Management</strong></h4>
+						<span class="lieu">Romanian-American University, Bucuresti</span>
+						<span class="dates">2018-Present</span>
+						<p>First year studying for a master degree in Computer Science.</p>
+					</li>
+					<li>
+						<h4><strong>Bachelor's degree: Economic Informatics</strong></h4>
+						<span class="lieu">Romanian-American University, Bucuresti</span>
+						<span class="dates">2015-2018</span>
+						<p>The university ensures the training for: analysis, design and implementation of information systems in enterprises; utilization and configuration of software packages with application in economy; development and introduction of the applied software; research and application of the new computer science technologies; computer programming skills.</p>
+					</li>
+					<li>
+							<h4><strong>High School / Vocational school: Mathematics and Informatics</strong></h4>
+							<span class="lieu">National College Radu Greceanu, Slatina</span>
+							<span class="dates">2010-2014</span>
+							<p>With intensive english lessons, I also studied german for 8 years.</p>
+						</li>
+				</ul>
+			</div>
+		
+			<!-- Loisirs -->
+			<div class="grid_8 competences">
+					<h3>Foreign languages</h3>
+					<ul class="barres">
+						<li data-skills="100">English-Advanced<span style="width: 100%;"></span></li>
+						<li data-skills="55">German-Beginer<span style="width: 55%;"></span></li>
+						<li data-skills="50">Italian-Beginner<span style="width: 50%;"></span></li>
+					</ul>
+				</div>
+		
+			<!-- Contact -->
+			<div class="grid_8 contact">
+				<h3>Skills from work experience</h3>
+				<ul>
+					<li class="lieu">MySQL</li>
+					<li class="phone">Bash(Linux Scripting)</li>
+					<li class="mail">JavaScript</li>
+					<li class="mail">Servers Knowledge</li>
+					<li class="mail">Automation</li>
+				</ul>
+			</div>
+				<!-- Loisirs -->
+				<div class="grid_8 loisirs">
+						<h3>Other Info</h3>
+						<p><strong>Microsoft Summer School :</strong> After successfully finishing the project that we agreed upon with our Microsoft mentor, me and my team obtained the Microsoft summer school certification.</p>
+						<p><strong>Let's do it Romania! :</strong> Date 2010 – Present (Slatina-Bucuresti) Every fall and spring volunteers help clean the Botanical Garden in Bucharest</p>
+						<p>Driving license-2.10.2014</p>
+					</div>
+	</section>
+
+	
+
+<!-- Scripts JavaScript -->
+<script src="files/jquery-1.js"></script>
+<script src="files/validate.js"></script>
+<!--[if lt IE 9]>
+<script src="scripts/placeholder.js"></script>
+<![endif]-->
+<script src="files/plugins.js"></script>
+
+</body></html>
